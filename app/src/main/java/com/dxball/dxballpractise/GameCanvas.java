@@ -41,7 +41,7 @@ public class GameCanvas extends View implements KeyEvent.Callback {
             left = true;
             right = up = down = false;
         }
-        if(y == maxHeight - radius){
+        if(y >= maxHeight - radius){
             down = false;
             up = true;
         }
@@ -50,7 +50,7 @@ public class GameCanvas extends View implements KeyEvent.Callback {
         }
         else if(up && y <= maxHeight - radius) {
             canvas.drawCircle(x, y-=3, radius, paint);
-            if(y == radius){
+            if(y <= radius){
                 up = false;
                 down = true;
             }

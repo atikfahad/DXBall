@@ -1,5 +1,6 @@
 package com.dxball.dxballpractise;
 
+import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements OnKeyListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         g = new GameCanvas(this);
+        //getActionBar().hide();
+
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
